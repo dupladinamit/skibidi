@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Link Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --text-color: #1f2937;
+            --light-text: #6b7280;
+            --background: #ffffff;
+            --card-bg: #f9fafb;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .step {
+            background-color: var(--card-bg);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .step-description {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn i {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            z-index: 100;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .dark-mode {
+            --primary-color: #818cf8;
+            --primary-hover: #6366f1;
+            --text-color: #f9fafb;
+            --light-text: #d1d5db;
+            --background: #111827;
+            --card-bg: #1f2937;
+            --border-color: #374151;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .step {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Personal Link Hub</h1>
+            <p class="subtitle">Connect with me and explore my work! This is your gateway to my digital presence.</p>
+        </header>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h2 class="step-title">Follow me on GitHub</h2>
+                </div>
+                <p class="step-description">Check out my coding projects and open-source contributions.</p>
+                <a href="https://github.com/yourprofile" target="_blank" class="btn">
+                    <i class="fab fa-github"></i>
+                    Visit GitHub Profile
+                </a>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h2 class="step-title">Connect on LinkedIn</h2>
+                </div>
+                <p class="step-description">Let's build a professional connection and network together.</p>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn">
+                    <i class="fab fa-linkedin"></i>
+                    Connect on LinkedIn
+                </a>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h2 class="step-title">Visit my Portfolio</h2>
+                </div>
+                <p class="step-description">Explore my work, projects, and achievements.</p>
+                <a href="https://yourportfolio.com" target="_blank" class="btn">
+                    <i class="fas fa-briefcase"></i>
+                    View Portfolio
+                </a>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h2 class="step-title">Send me an Email</h2>
+                </div>
+                <p class="step-description">Got a question or opportunity? Let's talk!</p>
+                <a href="mailto:youremail@example.com" class="btn">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        // Check for saved theme preference or use user's system preference
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Make steps customizable through a simple API
+        window.LinkHub = {
+            updateStep: function(stepNumber, options) {
+                const steps = document.querySelectorAll('.step');
+                if (stepNumber <= 0 || stepNumber > steps.length) {
+                    console.error(`Step ${stepNumber} does not exist`);
+                    return;
+                }
+                
+                const step = steps[stepNumber - 1];
+                
+                if (options.title) {
+                    step.querySelector('.step-title').textContent = options.title;
+                }
+                
+                if (options.description) {
+                    step.querySelector('.step-description').textContent = options.description;
+                }
+                
+                if (options.url) {
+                    step.querySelector('.btn').href = options.url;
+                }
+                
+                if (options.buttonText) {
+                    // Find the text node and update it
+                    const btn = step.querySelector('.btn');
+                    btn.childNodes.forEach(node => {
+                        if (node.nodeType === 3) { // Text node
+                            node.nodeValue = options.buttonText;
+                        }
+                    });
+                }
+                
+                if (options.icon) {
+                    const icon = step.querySelector('.btn i');
+                    icon.className = options.icon.startsWith('fa') ? options.icon : `fas fa-${options.icon}`;
+                }
+            },
+            
+            updateHeader: function(options) {
+                if (options.title) {
+                    document.querySelector('h1').textContent = options.title;
+                }
+                
+                if (options.subtitle) {
+                    document.querySelector('.subtitle').textContent = options.subtitle;
+                }
+            },
+            
+            updateFooter: function(text) {
+                document.querySelector('footer p').textContent = text;
+            },
+            
+            updateTheme: function(colors) {
+                const root = document.documentElement;
+                
+                for (const [key, value] of Object.entries(colors)) {
+                    root.style.setProperty(`--${key}`, value);
+                }
+            }
+        };
+
+        // Example usage (can be removed or customized):
+        // window.LinkHub.updateStep(1, {
+        //     title: "Check out my Twitter",
+        //     description: "Follow me for updates and thoughts",
+        //     url: "https://twitter.com/yourhandle",
+        //     buttonText: "Follow on Twitter",
+        //     icon: "fa-twitter"
+        // });
+        
+        // window.LinkHub.updateHeader({
+        //     title: "John Doe's Link Hub",
+        //     subtitle: "Connect with me across the digital universe!"
+        // });
+        
+        // window.LinkHub.updateFooter("© 2023 John Doe. Reach out anytime!");
+        
+        // window.LinkHub.updateTheme({
+        //     "primary-color": "#3b82f6",
+        //     "primary-hover": "#2563eb"
+        // });
+    </script>
+</body>
+</html>
